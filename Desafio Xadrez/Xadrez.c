@@ -35,6 +35,7 @@ int main(){
             printf("1. Torre.\n");
             printf("2. Rainha.\n");
             printf("3. Bispo.\n");
+            printf("4. Cavalo.\n");
             scanf("%d", &opcao);
 
             switch (opcao){
@@ -44,7 +45,7 @@ int main(){
             case 1:
 
                 
-               do { 
+            do { 
                 printf("Escolha o movimento: [Direita|Esquerda|Cima|Baixo]\n");
                 scanf(" %19s", movimento);                           
 
@@ -74,7 +75,7 @@ int main(){
                 break;
             case 2:
 
-                do { 
+            do { 
                 printf("Escolha o movimento: [Direita|Esquerda|Cima|Baixo|DireitaCima|DireitaBaixo|EsquerdaCima|EsquerdaBaixo]\n");
                 scanf(" %19s", movimento);
                            
@@ -120,7 +121,7 @@ int main(){
                 break;
             case 3:
 
-                do { 
+            do { 
                 printf("Escolha o movimento: DireitaCima|DireitaBaixo|EsquerdaCima|EsquerdaBaixo]\n");
                 scanf(" %19s", movimento);
 
@@ -144,6 +145,46 @@ int main(){
                     printf("Movimento invalido. Tente novamente.\n");
                     }
 
+            } while (1);
+
+                break;
+            case 4:
+
+            do { 
+                printf("Escolha o movimento: CimaCimaDireita|CimaCimaEsquerda|BaixoBaixoDireita|BaixoBaixoEsquerda|EsqEsqBaixo|EsqEsqCima|DirDirBaixo|DirDirCima]\n");
+                scanf(" %19s", movimento);
+
+                if (strcmp(movimento, "CimaCimaDireita") == 0){
+                    for (int i = 0; i < 5; i++){
+                        printf("CimaCimaDireita\n");
+                    } 
+                } else if (strcmp(movimento, "CimaCimaEsquerda") == 0){
+                    for (int i = 0; i < 5; i++){
+                        printf("CimaCimaEsquerda\n");
+                    }
+                } else if (strcmp(movimento, "BaixoBaixoDireita") == 0){
+                    for (int i = 0; i < 5; i++){
+                        printf("BaixoBaixoDireita\n");
+                    }
+                } else if (strcmp(movimento, "BaixoBaixoEsquerda") == 0) {
+                    for (int i = 0; i < 5; i++){
+                        printf("BaixoBaixoEsquerda\n");
+                    }
+                } else if (strcmp(movimento, "EsqEsqBaixo") == 0) {
+                    for (int i = 0; i < 5; i++){
+                        printf("EsqEsqBaixo\n");
+                    }
+                } else if (strcmp(movimento, "EsqEsqCima") == 0) {
+                    for (int i = 0; i < 5; i++){
+                        printf("EsqEsqCima\n");
+                    }
+                } else if (strcmp(movimento, "DirDirBaixo") == 0) {
+                    for (int i = 0; i < 5; i++){
+                        printf("DirDirCima\n");
+                    }
+                } else {
+                    printf("Movimento invalido. Tente novamente.\n");
+                    }
             } while (1);
 
                 break;
